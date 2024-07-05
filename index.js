@@ -1,12 +1,10 @@
 const express = require("express");
-require("dotenv").config();
+
 const app = express();
+const port = 8000;
+// const api_url = "https://api.github.com/users/darshangujraticodes";
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-const githubUserData = {
+const apiData = {
   login: "darshangujraticodes",
   id: 81023123,
   node_id: "MDQ6VXNlcjgxMDIzMTIz",
@@ -38,22 +36,28 @@ const githubUserData = {
   hireable: null,
   bio: "Passionate Coder, Reader & Youtuber. On path to achieve Full Stack Developer Skill & SEO expert to give you the best App Solution needed for digital world.",
   twitter_username: null,
-  public_repos: 26,
+  public_repos: 23,
   public_gists: 0,
   followers: 1,
-  following: 9,
+  following: 17,
   created_at: "2021-03-20T12:54:17Z",
-  updated_at: "2024-05-06T10:32:38Z",
+  updated_at: "2024-06-09T06:06:19Z",
 };
 
+const jsonData = JSON.stringify(apiData);
+
+app.get("/", (req, res) => {
+  res.send("Hello World, It is Home Page request..");
+});
+
 app.get("/login", (req, res) => {
-  res.send("  <h1> Kindly Login for more Information </h1> ");
+  res.send("Login page request by user !");
 });
 
 app.get("/github", (req, res) => {
-  res.json(githubUserData);
+  res.send(`${jsonData}`);
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Example app listening on port ${process.env.PORT}`);
+app.listen(port, () => {
+  console.log(`NodeJs server request is listening on port ${port}`);
 });
