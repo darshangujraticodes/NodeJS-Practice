@@ -1,0 +1,15 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node 01-Intro.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}

@@ -1,7 +1,17 @@
-const express = require("express");
+// ES6 new js version
+// To enable ES6 in package json add value "type":"module";
+// js has 2 types common jsx and module js here we are using module js which is ES6 format
+import express from "express";
+import "dotenv/config";
+
+// old js version
+// require("dotenv").config();
+// console.log(process.env);
 
 const app = express();
-const port = 8000;
+
+// const PORT = 8000;
+
 // const api_url = "https://api.github.com/users/darshangujraticodes";
 
 const apiData = {
@@ -55,9 +65,11 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/github", (req, res) => {
-  res.send(`${jsonData}`);
+  // res.send(`${jsonData}`);
+  res.json(apiData);
 });
 
-app.listen(port, () => {
-  console.log(`NodeJs server request is listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`NodeJs server request is listening on port ${process.env.PORT}`);
+  console.log(`${process.env.DATABASE_URL}`);
 });
