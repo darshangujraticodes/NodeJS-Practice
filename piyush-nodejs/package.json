@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node 01-Intro.js"
+    "start": "node index"
   },
   "author": "",
   "license": "ISC",
