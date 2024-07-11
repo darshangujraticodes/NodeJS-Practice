@@ -24,3 +24,8 @@
 7/9/2024, 6:53:36 PM : New Server Request from path /search?searchQuery=best%20forts%20in%20india
 7/9/2024, 6:54:09 PM : New Server Request from path /search?searchQuery=best%20forts%20in%20india
 7/9/2024, 6:54:12 PM : New Server Request from path /search?searchQuery=best%20forts%20in%20india
+7/11/2024, 6:42:55 PM : New Server Request from path / with HTTP Methods GET
+7/11/2024, 6:42:59 PM : New Server Request from path /contact with HTTP Methods GET
+7/11/2024, 6:43:10 PM : New Server Request from path /about with HTTP Methods GET
+7/11/2024, 6:43:13 PM : New Server Request from path /aboutus with HTTP Methods GET
+7/11/2024, 6:44:19 PM : New Server Request from path /aboutus with HTTP Methods GET
