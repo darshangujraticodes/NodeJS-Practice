@@ -66,7 +66,7 @@ Now Understand Why Web used Express if all things can be controlled thourgh http
 2] In long code form code standard get degrades and start confusion for coder to understand becoz 
 switch case for every routing and inside switch condition we require http methods condition to check and operate data accordingly
 
-
+3] Express make your code in clean and clear structure 
 
 */
 
