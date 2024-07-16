@@ -58,4 +58,58 @@ PUT /             =>  insert the file(pdf, doc or excel) on server.
 
 DELETE /users/id  =>  delete the data of specific user fetch from ID
 
+Browser always works on GET Method so post, patch and delete cannot be performed through brower it required external software named postman.
+
+but here in beginning phase we are not working in database data so here we will create external source 
+
+to get dummy details one of the best to generate random details is mockaroo.com
+
 */
+
+const express = require("express");
+const users = require("./MOCK_DATA.json");
+
+const app = express();
+const PORT = 8000;
+
+// Server Side Rendering (HTML format)
+app.get("/users", (req, res) => {
+  const html = `  
+        <table>  
+                <tr> 
+                        <th> ID </th>
+                        <th> Name </th>
+                        <th> Email </th>
+                        <th> Job </th>
+                </tr>
+                ${users
+                  .map(
+                    (user) => `
+                        <tr>
+                                <td> ${user.id} </td>
+                                <td> ${user.first_name} ${user.last_name} </td>
+                                <td> ${user.email} </td>
+                                <td> ${user.job_role} </td>
+                        </tr>`
+                  )
+                  .join("")}
+                
+        </table> `;
+
+  return res.send(html);
+});
+
+// Client Side Rendering (JSON format)
+app.get("/api/users", (req, res) => {
+  return res.json(users);
+});
+
+app.get("/api/users/:id", (req, res) => {
+  const id = Number(req.params.id);
+  const fetchUserData = users.find((user) => user.id === id);
+  return res.json(fetchUserData);
+});
+
+app.listen(PORT, (req, res) => {
+  console.log(`Server is Running Successfull on PORT = ${PORT}`);
+});
