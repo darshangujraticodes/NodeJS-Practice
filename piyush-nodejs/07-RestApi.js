@@ -58,7 +58,34 @@ PUT /             =>  insert the file(pdf, doc or excel) on server.
 
 DELETE /users/id  =>  delete the data of specific user fetch from ID
 
-Browser always works on GET Method so post, patch and delete cannot be performed through brower it required external software named postman.
+Browser always works on GET Method so post, patch and delete cannot be performed through brower it required external software tool named postman which will performed api test operation.
+
+While sending data through api 
+it consist of following information parts
+
+
+headers
+
+note 
+ther are some custom headers dat in both request and response they are denoted by   " X-headerdataname"
+
+consist of 2 types 
+
+1] Request Headers
+-> Request URL
+-> http methods
+-> path
+-> status code 
+-> content-type   
+
+2] Response Headers
+-> Request URL
+-> http methods
+-> path
+-> status code 
+-> content-type   
+
+
 
 but here in beginning phase we are not working in database data so here we will create external source 
 
@@ -67,10 +94,16 @@ to get dummy details one of the best to generate random details is mockaroo.com
 */
 
 const express = require("express");
-const users = require("./MOCK_DATA.json");
+let users = require("./MOCK_DATA.json");
+const fsdata = require("fs");
+const { error } = require("console");
 
 const app = express();
 const PORT = 8000;
+
+// Middleware
+
+app.use(express.urlencoded({ extended: false }));
 
 // Server Side Rendering (HTML format)
 app.get("/users", (req, res) => {
@@ -99,16 +132,71 @@ app.get("/users", (req, res) => {
   return res.send(html);
 });
 
+// but not get, patch and delete have common route so asper industry standard when we have common route paths but different http methods then we can create chain function and define logic accordingly example below
+
+app
+  .route("/api/users/:id")
+  .get((req, res) => {
+    const id = req.params.id;
+    const fetchUserData = users.find((user) => user.id == id);
+    return res.json(fetchUserData);
+  })
+  .patch((req, res) => {
+    const body = req.body;
+    const id = req.params.id;
+
+    const dataIndex = users.findIndex((user) => user.id == id);
+    // console.log("Body = ", body, " data index =", dataIndex, " userdata id ");
+
+    users[dataIndex] = { id: id, ...body };
+
+    fsdata.writeFile("./MOCK_DATA.json", JSON.stringify(users), (error) => {
+      if (error) {
+        console.log("Error =", error);
+        return res.json({ status: "Error" });
+      } else {
+        console.log(`Data Updated Succesfully in Database `);
+        return res.json({ status: "Updated Succesfully " });
+      }
+    });
+  })
+  .delete((req, res) => {
+    const id = req.params.id;
+    const filterData = users.filter((user) => user.id != id);
+    users = [...filterData];
+    fsdata.writeFile("./MOCK_DATA.json", JSON.stringify(users), (error) => {
+      if (error) {
+        console.log("Error =", error);
+        return res.json({ status: "Error" });
+      } else {
+        console.log(`Data Deleted Succesfully from Database `);
+        return res.json({ status: "Deleted Succesfully " });
+      }
+    });
+  });
+
 // Client Side Rendering (JSON format)
 app.get("/api/users", (req, res) => {
   return res.json(users);
 });
 
-app.get("/api/users/:id", (req, res) => {
-  const id = Number(req.params.id);
-  const fetchUserData = users.find((user) => user.id === id);
-  return res.json(fetchUserData);
+// create and insert new user data
+app.post("/api/users", (req, res) => {
+  const body = req.body;
+  console.log("Body = ", body);
+  users.push({ id: users.length + 1, ...body });
+  fsdata.writeFile("./MOCK_DATA.json", JSON.stringify(users), (error) => {
+    if (error) {
+      console.log("Error =", error);
+      return res.json({ status: "Error" });
+    } else {
+      console.log(`New Data Inserted Succesfully with Id = ${users.length}`);
+      return res.json({ status: "Registered Succesfully" });
+    }
+  });
 });
+
+// note browser in default is in get method http methods , to perform, post, patch and delete required
 
 app.listen(PORT, (req, res) => {
   console.log(`Server is Running Successfull on PORT = ${PORT}`);
