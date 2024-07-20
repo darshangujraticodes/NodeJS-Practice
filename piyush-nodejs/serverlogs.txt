@@ -1,31 +1,16 @@
 
-7/9/2024, 6:41:33 PM : New Server Request from path /
-7/9/2024, 6:41:36 PM : New Server Request from path /
-7/9/2024, 6:41:36 PM : New Server Request from path /
-7/9/2024, 6:41:36 PM : New Server Request from path /
-7/9/2024, 6:41:36 PM : New Server Request from path /
-7/9/2024, 6:41:37 PM : New Server Request from path /
-7/9/2024, 6:41:55 PM : New Server Request from path /about
-7/9/2024, 6:41:57 PM : New Server Request from path /aboutus
-7/9/2024, 6:42:03 PM : New Server Request from path /about
-7/9/2024, 6:42:10 PM : New Server Request from path /contact
-7/9/2024, 6:42:42 PM : New Server Request from path /contact?email=darshan@gmail.com&phone=9226867641
-7/9/2024, 6:44:44 PM : New Server Request from path /contact?email=darshan@gmail.com&phone=9226867641
-7/9/2024, 6:44:47 PM : New Server Request from path /contact?email=darshan@gmail.com&phone=9226867641
-7/9/2024, 6:46:58 PM : New Server Request from path /contact?email=darshan@gmail.com&phone=9226867641
-7/9/2024, 6:50:57 PM : New Server Request from path /contact?email=darshan@gmail.com&phone=9226867641
-7/9/2024, 6:51:01 PM : New Server Request from path /contact
-7/9/2024, 6:51:04 PM : New Server Request from path /search
-7/9/2024, 6:51:27 PM : New Server Request from path /search
-7/9/2024, 6:52:16 PM : New Server Request from path /search?searchQuery=best%20hill%20station%20in%20india
-7/9/2024, 6:52:38 PM : New Server Request from path /search?searchQuery=best%20hill%20station%20in%20india
-7/9/2024, 6:52:54 PM : New Server Request from path /search?searchQuery=best%20hill%20station%20in%20india
-7/9/2024, 6:53:10 PM : New Server Request from path /search?searchQuery=best%20hill%20station%20in%20india
-7/9/2024, 6:53:36 PM : New Server Request from path /search?searchQuery=best%20forts%20in%20india
-7/9/2024, 6:54:09 PM : New Server Request from path /search?searchQuery=best%20forts%20in%20india
-7/9/2024, 6:54:12 PM : New Server Request from path /search?searchQuery=best%20forts%20in%20india
-7/11/2024, 6:42:55 PM : New Server Request from path / with HTTP Methods GET
-7/11/2024, 6:42:59 PM : New Server Request from path /contact with HTTP Methods GET
-7/11/2024, 6:43:10 PM : New Server Request from path /about with HTTP Methods GET
-7/11/2024, 6:43:13 PM : New Server Request from path /aboutus with HTTP Methods GET
-7/11/2024, 6:44:19 PM : New Server Request from path /aboutus with HTTP Methods GET
+Date = 20/7/2024, 2:43:38 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 2:45:38 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 2:46:02 pm : POST : /users/ : ::1 
+Date = 20/7/2024, 3:19:10 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:19:18 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:19:52 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:32:06 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:32:12 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:32:48 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:32:50 pm : GET : /users/ : ::1 
+Date = 20/7/2024, 3:33:19 pm : POST : /users/ : ::1 
+Date = 20/7/2024, 3:34:04 pm : POST : /users/ : ::1 
+Date = 20/7/2024, 3:34:29 pm : POST : /users/ : ::1 
+Date = 20/7/2024, 3:35:30 pm : POST : /users/ : ::1 
+Date = 20/7/2024, 3:37:04 pm : POST : /users/ : ::1 

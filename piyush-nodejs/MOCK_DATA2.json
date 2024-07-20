@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "sahil",
+    "email": "sahil@theguardian.com",
+    "phone": "9890559585"
+  },
+  { "id": 2, "name": "ajit", "email": "ajit@gmail.com", "phone": "9297857485" },
+  {
+    "id": 3,
+    "name": "kunal",
+    "email": "kunal@gmail.com",
+    "phone": "9586566546"
+  },
+  {
+    "id": 4,
+    "name": "akshay",
+    "email": "akshay@gmail.com",
+    "phone": "8783564518"
+  },
+  {
+    "id": 5,
+    "name": "darshan",
+    "email": "darshan@gmail.com",
+    "phone": "9834881634"
+  },
+  {
+    "id": 6,
+    "name": "vaibhav",
+    "email": "vaibhav@gmail.com",
+    "phone": "9874859652"
+  },
+  {
+    "id": 7,
+    "name": "avani",
+    "email": "avani@gmail.com",
+    "phone": "9874859854"
+  },
+  {
+    "id": 8,
+    "name": "sonal",
+    "email": "sonal@gmail.com",
+    "phone": "9854859854"
+  },
+  {
+    "id": 9,
+    "name": "shailesh",
+    "email": "shailes@gmail.com",
+    "phone": "9859856321"
+  },
+  {
+    "id": 10,
+    "name": "ferrini",
+    "email": "ferrini@gmail.com",
+    "phone": "9859856321"
+  }
+]
