@@ -7,6 +7,122 @@ Date = 20/7/2024, 3:19:18 pm : GET : /users/ : ::1
 Date = 20/7/2024, 3:19:52 pm : GET : /users/ : ::1 
 Date = 20/7/2024, 3:32:06 pm : GET : /users/ : ::1 
 Date = 20/7/2024, 3:32:12 pm : GET : /users/ : ::1 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Date = 20/7/2024, 3:32:48 pm : GET : /users/ : ::1 
 Date = 20/7/2024, 3:32:50 pm : GET : /users/ : ::1 
 Date = 20/7/2024, 3:33:19 pm : POST : /users/ : ::1 
@@ -14,3 +130,7 @@ Date = 20/7/2024, 3:34:04 pm : POST : /users/ : ::1
 Date = 20/7/2024, 3:34:29 pm : POST : /users/ : ::1 
 Date = 20/7/2024, 3:35:30 pm : POST : /users/ : ::1 
 Date = 20/7/2024, 3:37:04 pm : POST : /users/ : ::1 
+
+PORT = 8000
+SMTP_MAIL = "vaibhavgujrati27@gmail.com"
+SMTP_PASSWORD = "oabb nuam omir exlm"

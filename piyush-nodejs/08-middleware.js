@@ -57,7 +57,7 @@ app.post("/users/", (req, res, next) => {
   const body = req.body;
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const phoneRegex = /^[0-9]{10}$/;
-  console.log(body.name, body.email, body.phone);
+  //   console.log(body.name, body.email, body.phone);
   if (
     body.name == "" ||
     body.email == "" ||
