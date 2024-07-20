@@ -131,6 +131,5 @@ Date = 20/7/2024, 3:34:29 pm : POST : /users/ : ::1
 Date = 20/7/2024, 3:35:30 pm : POST : /users/ : ::1 
 Date = 20/7/2024, 3:37:04 pm : POST : /users/ : ::1 
 
-PORT = 8000
-SMTP_MAIL = "vaibhavgujrati27@gmail.com"
-SMTP_PASSWORD = "oabb nuam omir exlm"
+vaibhavgujrati27@gmail.com
+oabb nuam omir exlm
