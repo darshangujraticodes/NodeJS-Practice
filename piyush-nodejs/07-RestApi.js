@@ -96,13 +96,12 @@ to get dummy details one of the best to generate random details is mockaroo.com
 const express = require("express");
 let users = require("./MOCK_DATA.json");
 const fsdata = require("fs");
-const { error } = require("console");
+const { error, log } = require("console");
 
 const app = express();
 const PORT = 8000;
 
 // Middleware
-
 app.use(express.urlencoded({ extended: false }));
 
 // Server Side Rendering (HTML format)
@@ -143,12 +142,19 @@ app
   })
   .patch((req, res) => {
     const body = req.body;
-    const id = req.params.id;
+    const reqid = req.params.id;
 
-    const dataIndex = users.findIndex((user) => user.id == id);
+    const dataIndex = users.findIndex((user) => user.id == reqid);
     // console.log("Body = ", body, " data index =", dataIndex, " userdata id ");
+    // console.log("Dataindex =", dataIndex);
 
-    users[dataIndex] = { id: id, ...body };
+    if (dataIndex != -1) {
+      users[dataIndex] = { id: Number(reqid), ...body };
+      // console.log(users[dataIndex]);
+    } else {
+      return res.json({ status: "No such user Found !" });
+      // console.log(users[reqid]);
+    }
 
     fsdata.writeFile("./MOCK_DATA.json", JSON.stringify(users), (error) => {
       if (error) {
@@ -161,18 +167,24 @@ app
     });
   })
   .delete((req, res) => {
-    const id = req.params.id;
-    const filterData = users.filter((user) => user.id != id);
-    users = [...filterData];
-    fsdata.writeFile("./MOCK_DATA.json", JSON.stringify(users), (error) => {
-      if (error) {
-        console.log("Error =", error);
-        return res.json({ status: "Error" });
-      } else {
-        console.log(`Data Deleted Succesfully from Database `);
-        return res.json({ status: "Deleted Succesfully " });
-      }
-    });
+    const reqid = req.params.id;
+    const dataIndex = users.findIndex((user) => user.id == reqid);
+
+    if (dataIndex === -1) {
+      return res.json({ status: "No such user Found !" });
+    } else {
+      const filterData = users.filter((user) => user.id != reqid);
+      users = [...filterData];
+      fsdata.writeFile("./MOCK_DATA.json", JSON.stringify(users), (error) => {
+        if (error) {
+          console.log("Error =", error);
+          return res.json({ status: "Error" });
+        } else {
+          console.log(`Data Deleted Succesfully from Database `);
+          return res.json({ status: "Deleted Succesfully " });
+        }
+      });
+    }
   });
 
 // Client Side Rendering (JSON format)
