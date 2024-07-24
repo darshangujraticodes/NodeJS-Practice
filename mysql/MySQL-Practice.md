@@ -64,6 +64,8 @@ Delete database
 DROP testDB;
 ```
 
+---
+
 ### Table operation
 
 Create table
@@ -81,7 +83,7 @@ CREATE TABLE Employee(
 
 ```
 
-Insert values
+Insert Values
 
 ```
 INSERT into Employee values(1, 'Darsh','darsh@gmail.com','9890559574','Full Stack Developer','IT');
@@ -91,5 +93,19 @@ INSERT into Employee values(2, 'Ajay','ajay@gmail.com','9865748596','SEO Expert'
 INSERT into Employee values(3, 'Santosh','ajay@gmail.com','9865747485','Accountant','Accounts');
 
 INSERT into Employee values(4, 'Karan','karan@gmail.com','9890559574','Frontend Developer','IT');
+
+```
+
+Display Table Values
+
+```
+SELECT * from Employee;
+
+```
+
+Table Values Description
+
+```
+DESC Employee;
 
 ```
