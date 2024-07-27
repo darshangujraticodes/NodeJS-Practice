@@ -327,11 +327,18 @@ Checkout Example Below
 
 ```
 Different Career Opportunity in Programming Language
-
- |  Prog Lang    | Frontend             |  Backend      |
- | :------------ | :------------------: | ------------: |
- |  Java         | -                    | Springboot    |
- |  Python       | -                    | Django        |
- |  Javascript   | React, Angular, Vue  | NodeJS        |
+| Prog Lang  |      Frontend       |    Backend     | App Development |
+| :--------- | :-----------------: | :------------: | --------------: |
+| Java       |          -          |   Springboot   |          kotlin |
+| Python     |          -          | Django / Flask |               - |
+| Javascript | React, Angular, Vue |     NodeJS     |    React Native |
 
 ```
+
+### Table Output :
+
+| Prog Lang  |      Frontend       |    Backend     | App Development |
+| :--------- | :-----------------: | :------------: | --------------: |
+| Java       |          -          |   Springboot   |          kotlin |
+| Python     |          -          | Django / Flask |               - |
+| Javascript | React, Angular, Vue |     NodeJS     |    React Native |
