@@ -47,3 +47,45 @@ show collections;
 ```
 
 4. Insert value in collections it is of 2 types (insertOne() and insertMany())
+
+   - insertOne()
+     syntax :
+     db.collection-name.insertOne(
+     {
+     field1:value1,
+     field2:value2,
+     ...
+     }
+     )
+
+   query example.
+   db.students.insertOne({
+   rollno:5, name:'Rohan', stream:'science'
+   })
+
+   - insertMany()
+     syntax :
+     db.collection-name.insertMany([
+     {
+     field1:value1,
+     field2:value2,
+     ...
+     },
+     {
+     field1:value1,
+     field2:value2,
+     ...
+     },
+     {
+     field1:value1,
+     field2:value2,
+     ...
+     },
+     ] )
+
+   query example.
+   db.students.insertMany([
+   {rollno:2, name:'sahil',stream:'commerce'},
+   {rollno:3, name:'vaibhav',stream:'arts'},
+   {rollno:4, name:'Anurag',stream:'diploma'},
+   ])
