@@ -39,7 +39,7 @@ db.dropDatabase()
  db.createCollection('schools')
 ```
 
-2. Delete collection form database;
+2. Delete collection form database; <br>
    syntax : db.collection_name.drop()
 
 ```
