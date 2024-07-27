@@ -326,12 +326,13 @@ Note: Colon define your text alignment in table
 Checkout Example Below
 
 ```
-Different Career Opportunity in Programming Language
-| Prog Lang  |      Frontend       |    Backend     | App Development |
-| :--------- | :-----------------: | :------------: | --------------: |
-| Java       |          -          |   Springboot   |          kotlin |
-| Python     |          -          | Django / Flask |               - |
-| Javascript | React, Angular, Vue |     NodeJS     |    React Native |
+Ex. Programming Language Framwork for Different Career Options
+
+| Prog Lang  |      Frontend       |    Backend     | App Development | Data Science , AI & ML |
+| :--------- | :-----------------: | :------------: | :-------------: | ---------------------: |
+| Java       |          -          |   Springboot   |     kotlin      |                      - |
+| Python     |          -          | Django / Flask |        -        |      Numpy, Matplotlib |
+| Javascript | React, Angular, Vue |     NodeJS     |  React Native   |                      - |
 
 ```
 
