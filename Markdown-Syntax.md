@@ -9,7 +9,7 @@
 7. [Text Higlighter](https://github.com/darshangujraticodes/python-practice/blob/main/Markdown-Syntax.md#text-highlighter)
 8. [Code Block](https://github.com/darshangujraticodes/python-practice/blob/main/Markdown-Syntax.md#code-block)
 9. [DropDown Arrow](https://github.com/darshangujraticodes/python-practice/blob/main/Markdown-Syntax.md#dropdown-arrow)
-10. [Create Table]()
+10. [Create Table](https://github.com/darshangujraticodes/NodeJS-Practice/blob/main/Markdown-Syntax.md#create-table-in-md-file)
 
 <br>
 
