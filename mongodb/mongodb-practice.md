@@ -2,9 +2,14 @@
 
 MongoDB uses camel case structure for query declaration.
 
-### Database Operation
+short commands
 
-1. create database
+command + tab => for autocomplete
+cls => clear mongodbshell screen
+
+## Database Operation
+
+1. create database <br>
    syntax : use database_name;
 
 ```
@@ -29,7 +34,9 @@ db.dropDatabase()
 
 ---
 
-### Collection Operation
+## Collection Operation
+
+Note : Collection name and fields name inside collection are case sensitive <br>
 
 1. create collection inside database (collection is similar to table)
    <br>
@@ -52,7 +59,11 @@ db.schools.drop()
 show collections;
 ```
 
-4.  Insert value in collections it is of 2 types (insertOne() and insertMany())
+---
+
+## CRUD Operation
+
+1.  Insert value in collections it is of 2 types (insertOne() and insertMany())<br>
 
     - insertOne() <br>
       syntax :<br>
@@ -97,3 +108,41 @@ show collections;
     {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
     ])
     ```
+
+- While inserting data in mongodb it has 2 operation methods
+  --> Ordered : It is default behaviour and line execution interpretor stops after encountering first error.
+  --> Unordered : It is behaviour which ee have to set by setting `{ orderend: false }` which will allow interpretor to move on even though if it encounter any error jump on next line.
+
+2. Read Operation in MongoDB <br>
+
+   - Reading documents in MongoDB
+   - Comparison Operators
+   - Logical Operators
+   - Cursors in MongoDB
+   - Elements in Operators
+
+   1. Find method <br>
+
+   Type1 : find() <br>
+   It will fetch all elements of the collections <br>
+   syntax : db.collection_name.find(); <br>
+
+   ```
+   db.students.find()
+   ```
+
+   Type2 : find({key:value}) <br>
+   It will fetch required field value which will match the required condition of key value pair <br>
+   syntax : db.collection_name.find({key:value}); <br>
+
+   ```
+   db.students.find({  'stream':'science'  })
+   ```
+
+   Type3 : findOne({key:value}) <br>
+   It will fetch required field value which will match the required condition of key value pair but the only first match pair <br>
+   syntax : db.collection_name.find({key:value}); <br>
+
+   ```
+   db.students.findOne({  'stream':'science'  })
+   ```
