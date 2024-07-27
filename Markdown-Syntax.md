@@ -337,8 +337,8 @@ Different Career Opportunity in Programming Language
 
 ### Table Output :
 
-| Prog Lang  |      Frontend       |    Backend     | App Development |
-| :--------- | :-----------------: | :------------: | --------------: |
-| Java       |          -          |   Springboot   |          kotlin |
-| Python     |          -          | Django / Flask |               - |
-| Javascript | React, Angular, Vue |     NodeJS     |    React Native |
+| Prog Lang  |      Frontend       |    Backend     | App Development | Data Science , AI & ML |
+| :--------- | :-----------------: | :------------: | :-------------: | ---------------------: |
+| Java       |          -          |   Springboot   |     kotlin      |                      - |
+| Python     |          -          | Django / Flask |        -        |      Numpy, Matplotlib |
+| Javascript | React, Angular, Vue |     NodeJS     |  React Native   |                      - |
