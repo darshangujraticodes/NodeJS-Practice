@@ -48,7 +48,7 @@ show collections;
 
 4. Insert value in collections it is of 2 types (insertOne() and insertMany())
 
-   - insertOne()
+   - insertOne() <br>
      syntax :
      db.collection-name.insertOne(
      {
@@ -64,7 +64,7 @@ show collections;
    })
    ```
 
-   - insertMany()
+   - insertMany() <br>
      syntax :
      db.collection-name.insertMany([
      {
