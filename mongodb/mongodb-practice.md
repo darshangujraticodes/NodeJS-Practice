@@ -5,16 +5,18 @@ MongoDB uses camel case structure for query declaration.
 ### Database Operation
 
 1. create database
+   syntax : use database_name;
 
 ```
-use database_name
-eg. use student
+use student
 ```
 
 2. Display all database
 
 ```
-show dbs || show databases
+show dbs
+or
+show databases;
 ```
 
 Note : if you have created then too it wont show in show dbs untill and unless it has collection inside db.
