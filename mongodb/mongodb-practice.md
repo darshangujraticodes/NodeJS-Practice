@@ -52,48 +52,46 @@ db.schools.drop()
 show collections;
 ```
 
-4. Insert value in collections it is of 2 types (insertOne() and insertMany())
+4.  Insert value in collections it is of 2 types (insertOne() and insertMany())
 
-   - insertOne() <br>
-     syntax :<br>
-     db.collection-name.insertOne(
-     {
-     field1:value1,
-     field2:value2,
-     ...
-     }
-     )
+    - insertOne() <br>
+      syntax :<br>
+      db.collection-name.insertOne(
+      {
+      field1:value1,
+      field2:value2,
+      }
+      )
+      <br>
 
-   ```
-   db.students.insertOne({
-   rollno:5, name:'Rohan', stream:'science'
-   })
-   ```
+    ```
+    db.students.insertOne({
+    rollno:5, name:'Rohan', stream:'science'
+    })
+    ```
 
-   - insertMany() <br>
-     syntax :<br>
-     db.collection-name.insertMany([
-     {
-     field1:value1,
-     field2:value2,
-     ...
-     },
-     {
-     field1:value1,
-     field2:value2,
-     ...
-     },
-     {
-     field1:value1,
-     field2:value2,
-     ...
-     },
-     ] )
+    - insertMany() <br>
+      syntax :<br>
+      db.collection-name.insertMany([
+      {
+      field1:value1,
+      field2:value2,
+      },
+      {
+      field1:value1,
+      field2:value2,
+      },
+      {
+      field1:value1,
+      field2:value2,
+      },
+      ] )
+      <br>
 
-   ```
-   db.students.insertMany([
-   {rollno:2, name:'sahil',stream:'commerce'},
-   {rollno:3, name:'vaibhav',stream:'arts'},
-   {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
-   ])
-   ```
+    ```
+    db.students.insertMany([
+    {rollno:2, name:'sahil',stream:'commerce'},
+    {rollno:3, name:'vaibhav',stream:'arts'},
+    {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
+    ])
+    ```
