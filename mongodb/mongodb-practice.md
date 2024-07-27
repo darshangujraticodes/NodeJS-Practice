@@ -4,8 +4,8 @@ MongoDB uses camel case structure for query declaration.
 
 short commands
 
-command + tab => for autocomplete
-cls => clear mongodbshell screen
+command + tab => for autocomplete <br>
+cls => clear mongodbshell screen <br>
 
 ## Database Operation
 
@@ -109,8 +109,8 @@ show collections;
     ])
     ```
 
-- While inserting data in mongodb it has 2 operation methods
-  --> Ordered : It is default behaviour and line execution interpretor stops after encountering first error.
+- While inserting data in mongodb it has 2 operation methods <br>
+  --> Ordered : It is default behaviour and line execution interpretor stops after encountering first error. <br>
   --> Unordered : It is behaviour which ee have to set by setting `{ orderend: false }` which will allow interpretor to move on even though if it encounter any error jump on next line.
 
 2. Read Operation in MongoDB <br>
