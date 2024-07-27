@@ -58,10 +58,11 @@ show collections;
      }
      )
 
-   query example.
+   ```
    db.students.insertOne({
    rollno:5, name:'Rohan', stream:'science'
    })
+   ```
 
    - insertMany()
      syntax :
@@ -83,9 +84,10 @@ show collections;
      },
      ] )
 
-   query example.
+   ```
    db.students.insertMany([
    {rollno:2, name:'sahil',stream:'commerce'},
    {rollno:3, name:'vaibhav',stream:'arts'},
-   {rollno:4, name:'Anurag',stream:'diploma'},
+   {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
    ])
+   ```
