@@ -25,19 +25,23 @@ Note : if you have created then too it wont show in show dbs untill and unless i
 db.dropDatabase()
 ```
 
+---
+
 ### Collection Operation
 
 1. create collection inside database (collection is similar to table)
+   <br>
+   syntax : db.createCollection('db_name')
 
 ```
-db.createCollection('db_name')
-eg. db.createCollection('')
+ db.createCollection('schools')
 ```
 
 2. Delete collection form database;
+   syntax : db.collection_name.drop()
 
 ```
-db.collection_name.drop()
+db.schools.drop()
 ```
 
 3. Display all collection inside database
@@ -49,7 +53,7 @@ show collections;
 4. Insert value in collections it is of 2 types (insertOne() and insertMany())
 
    - insertOne() <br>
-     syntax :
+     syntax :<br>
      db.collection-name.insertOne(
      {
      field1:value1,
@@ -65,7 +69,7 @@ show collections;
    ```
 
    - insertMany() <br>
-     syntax :
+     syntax :<br>
      db.collection-name.insertMany([
      {
      field1:value1,
