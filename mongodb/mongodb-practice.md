@@ -63,6 +63,7 @@ show collections;
       }
       )
       <br>
+      <br>
 
     ```
     db.students.insertOne({
@@ -86,6 +87,7 @@ show collections;
       field2:value2,
       },
       ] )
+      <br>
       <br>
 
     ```
