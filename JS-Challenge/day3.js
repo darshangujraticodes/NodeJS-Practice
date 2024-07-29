@@ -75,9 +75,10 @@ switch (y) {
     console.log("Invalid Value");
 }
 
-let marks = 95;
+let marks = -54;
+console.log(marks);
 
-switch (marks) {
+switch (marks > 0) {
   case marks >= 85:
     console.log("You have scored Grade A");
     break;
@@ -98,8 +99,15 @@ switch (marks) {
     break;
   default:
     console.log("Invalid Value !");
+    break;
 }
 
 // Activity 4 : Ternary Statement
+
+let num = 45;
+
+num % 2 == 0
+  ? console.log("It is an Even Number ")
+  : console.log("It is an Odd Number");
 
 // Activity 5 : Combining Condition
