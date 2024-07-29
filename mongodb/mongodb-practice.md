@@ -201,6 +201,35 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    db.teachers.find( {  'joining_data' : { $in : [2005,2006,2007,2008] }  } );
    ```
 
+   ##### Mongodb Cursors
+
+   1. Cursors : Cursors in MongoDB is used to efficiently retrieve large result sets from Queries, providing control over the data retrieval process <br>
+
+   2. MongoDB retrieve the query result in batches. <br>
+
+   3. Default batch size is usually 101 documents. <br>
+
+   4. It imporves the memory efficiency. <br>
+
+   5. cursors are extending chain function which are applied on find(). <br>
+
+   ##### MongoDB cursors and its types
+
+   1. count() <br>
+   2. limit() <br>
+   3. skip() <br>
+   4. sort() [1 => Ascending order , -1 => Descending order] <br>
+
+   syntax : db.collection_name.find( { fieldname : { $operator : fieldvalue } } ).cursor(); <br>
+
+   ```
+   db.students.find({ rollno : {  $gt :  10  } }).count();
+   db.students.find({ rollno : {  $gt :  10  } }).limit(3);
+   db.students.find({ rollno : {  $gt :  10  } }).limit(3).skip(2);
+   db.students.find({ rollno : {  $gt :  10  } }).limit(5).sort({ 'rollno': -1});
+
+   ```
+
 ---
 
 ### Mongodb Import and Export
@@ -209,14 +238,14 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    mongoimport is of 2 format syntax : <br>
    Note: import file size should be less than 16mb otherwise won't allow. <br>
 
-   - Type 1 : When data is in json and not wrapped in array [] <br>
+   - Type 1 : When data is in json and not wrapped in array [ ] <br>
      syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name <br>
 
      ```
       mongoimport file_path\teachers.json -d school -c teachers;
      ```
 
-   - Type 2 : When data is in json and wrapped in array [] <br>
+   - Type 2 : When data is in json and wrapped in array [ ] <br>
      syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name --jsonArray <br>
 
      ```
@@ -229,3 +258,9 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    ```
    mongoexport -d schools -c teachers -o teacher-export-data.json
    ```
+
+---
+
+### MongoDB Tutorial Reference
+
+1. [MongoDB Course By Technical Thapa](https://youtu.be/rU9ZODw5yvU?si=y8GFQ6RplV6gv89e)
