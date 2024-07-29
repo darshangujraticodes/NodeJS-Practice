@@ -69,22 +69,22 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    <br>
    syntax : db.createCollection('db_name')
 
-```
- db.createCollection('schools')
-```
+   ```
+   db.createCollection('schools')
+   ```
 
 2. Delete collection form database; <br>
    syntax : db.collection_name.drop()
 
-```
-db.schools.drop()
-```
+   ```
+   db.schools.drop()
+   ```
 
 3. Display all collection inside database
 
-```
-show collections;
-```
+   ```
+   show collections;
+   ```
 
 ---
 
@@ -103,11 +103,11 @@ show collections;
       <br>
       <br>
 
-    ```
-    db.students.insertOne({
-    rollno:5, name:'Rohan', stream:'science'
-    })
-    ```
+      ```
+      db.students.insertOne({
+      rollno:5, name:'Rohan', stream:'science'
+      })
+      ```
 
     - insertMany() <br>
       syntax :<br>
@@ -128,13 +128,13 @@ show collections;
       <br>
       <br>
 
-    ```
-    db.students.insertMany([
-    {rollno:2, name:'sahil',stream:'commerce'},
-    {rollno:3, name:'vaibhav',stream:'arts'},
-    {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
-    ])
-    ```
+      ```
+      db.students.insertMany([
+      {rollno:2, name:'sahil',stream:'commerce'},
+      {rollno:3, name:'vaibhav',stream:'arts'},
+      {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
+      ])
+      ```
 
 - While inserting data in mongodb it has 2 operation methods <br>
   --> Ordered : It is default behaviour and line execution interpretor stops after encountering first error. <br>
@@ -191,7 +191,7 @@ show collections;
 
    syntax : <br>
    db.collection_name.find({ 'field_name': {'operator' : 'field_value' } }); <br>
-   <br> <br>
+   <br>
 
    ```
    db.teachers.find( {  'joining_data' : { $eq : 2005 }  } );
@@ -216,8 +216,6 @@ show collections;
       mongoimport file_path\teachers.json -d school -c teachers;
      ```
 
-     <br>
-
    - Type 2 : When data is in json and wrapped in array [] <br>
      syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name --jsonArray <br>
 
@@ -225,7 +223,7 @@ show collections;
       mongoimport file_path\teachers.json -d school -c teachers --jsonArray;
      ```
 
-2. MongnExport <br>
+2. MongoExport <br>
    syntax : mongoexport -d database_name -c collection_name -o (denote output) file_store_path/file_name.json <br>
 
    ```
