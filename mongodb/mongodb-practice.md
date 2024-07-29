@@ -1,6 +1,6 @@
 # Best site to get dummy json data is : Mockaroo
 
-I have generated 2 dummy data Employee and Teachers <br>
+I have generated 2 dummy data Employee and Teachers :
 [Mockaroo](https://www.mockaroo.com/) <br>
 
 ---
@@ -183,7 +183,6 @@ show collections;
 
    - Type 1 : When data is in json and not wrapped in array [] <br>
      syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name <br>
-     <br>
 
      ```
       mongoimport file_path\teachers.json -d school -c teachers;
@@ -191,7 +190,6 @@ show collections;
 
    - Type 2 : When data is in json and wrapped in array [] <br>
      syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name --jsonArray <br>
-     <br>
 
      ```
       mongoimport file_path\teachers.json -d school -c teachers --jsonArray;
