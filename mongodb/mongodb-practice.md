@@ -1,3 +1,30 @@
+# Best site to get dummy json data is : Mockaroo
+
+I have generated 2 dummy data Employee and Teachers <br>
+[Mockaroo](https://www.mockaroo.com/) <br>
+
+---
+
+# How to run mongodb in linux after installation
+
+=> mongodb start <br> <br>
+
+=> mongod --version <br> <br>
+
+=> sudo systemctl start mongod <br> <br>
+
+=> sudo systemctl status mongod <br> <br>
+
+=> mongosh <br> <br>
+
+# How to run mongodb in windows after installation
+
+=> mongod --version <br> <br>
+
+=> mongosh <br> <br>
+
+---
+
 # MongoDB Commands
 
 MongoDB uses camel case structure for query declaration.
@@ -146,3 +173,26 @@ show collections;
    ```
    db.students.findOne({  'stream':'science'  })
    ```
+
+---
+
+### Mongodb Import and Export
+
+1. MongoImport <br>
+   mongoimport is of 2 format syntax : <br>
+
+   - Type 1 : When data is in json and not wrapped in array [] <br>
+     syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name <br>
+     <br>
+
+     ```
+      mongoimport file_path\teachers.json -d school -c teachers;
+     ```
+
+   - Type 2 : When data is in json and wrapped in array [] <br>
+     syntax : mongoimport file_path_name\file_name.json -d database_name -c collection_name --jsonArray <br>
+     <br>
+
+     ```
+      mongoimport file_path\teachers.json -d school -c teachers --jsonArray;
+     ```
