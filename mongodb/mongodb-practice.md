@@ -1,7 +1,12 @@
-# Best site to get dummy json data is : Mockaroo
+# Best site to generate dummy json data is : Mockaroo
 
-I have generated 2 dummy data Employee and Teachers :
+I have generated 2 dummy data Employee and Teachers to practice operation on large data sets :
 [Mockaroo](https://www.mockaroo.com/) <br>
+
+It has 2 crucial benefits <br>
+
+1. Generate data in Customize format <br>
+2. Generated Data can be exported in mulitple format eg. csv, json and many other formats. <br>
 
 ---
 
@@ -67,7 +72,7 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
 1. create collection inside database (collection is similar to table)
    <br>
-   syntax : db.createCollection('db_name')
+   syntax : db.createCollection('collection_name')
 
    ```
    db.createCollection('schools')
@@ -149,8 +154,7 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    - Logical Operators
    - Cursors in MongoDB
    - Elements in Operators
-
-   1. Find method <br>
+     <br>
 
    Type1 : find() <br>
    It will fetch all elements of the collections <br>
