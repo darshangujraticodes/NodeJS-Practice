@@ -282,7 +282,32 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
 ---
 
-3. Deleted Operation in MongoDB <br>
+3. Update Operation in MongoDB <br>
+
+   ##### Update Operation
+
+   - updateOne() <br>
+     syntax :<br>
+     db.collection_name.updateOne( (to fetch particular data from json) { field_key:field_value } , (set new data for required fields) {
+     $set : {
+     field_name : field_value,
+     field_name : field_value,
+     field_name : field_value
+     }
+     } );
+     <br>
+
+     ```
+     db.students.updateMany({ rollno: 2 } , {  $set : {
+         name : 'Mayank',
+         sports : 'badminton',
+         stream : 'science'
+     }   }   );
+     ```
+
+---
+
+4. Deleted Operation in MongoDB <br>
 
    ##### Delete Operation
 
