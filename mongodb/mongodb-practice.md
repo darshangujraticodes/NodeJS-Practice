@@ -12,21 +12,21 @@ It has 2 crucial benefits <br>
 
 # How to run mongodb in linux after installation
 
-=> mongodb start <br> <br>
+=> mongodb start <br>
 
-=> mongod --version <br> <br>
+=> mongod --version <br>
 
-=> sudo systemctl start mongod <br> <br>
+=> sudo systemctl start mongod <br>
 
-=> sudo systemctl status mongod <br> <br>
+=> sudo systemctl status mongod <br>
 
 => mongosh <br> <br>
 
 # How to run mongodb in windows after installation
 
-=> mongod --version <br> <br>
+=> mongod --version <br>
 
-=> mongosh <br> <br>
+=> mongosh <br>
 
 ---
 
@@ -298,7 +298,7 @@ Note : Collection name and fields name inside collection are case sensitive <br>
      <br>
 
      ```
-     db.students.updateMany({ rollno: 2 } , {  $set : {
+     db.students.updateOne({ rollno: 2 } , {  $set : {
          name : 'Mayank',
          sports : 'badminton',
          stream : 'science'
