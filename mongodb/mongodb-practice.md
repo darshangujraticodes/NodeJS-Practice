@@ -188,19 +188,19 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    ##### Read operation using comparison operator
 
    We have multiple operator it define specific compairison operation <br>
-   $eq = Equal <br>
-   $neq = not equal <br>
-   $lt = less than <br>
-   $lte = less than equal too <br>
-   $gt = greater than <br>
-   $gte = greater than equal too <br>
-   $in = in (it will display the data whose value is present the
-   comparison array) <br>
-   $nin = Not in (It will display the data whose value is not present the comparison array) <br>
+
+   1. $eq = Equal <br>
+   2. $neq = not equal <br>
+   3. $lt = less than <br>
+   4. $lte = less than equal too <br>
+   5. $gt = greater than <br>
+   6. $gte = greater than equal too <br>
+   7. $in = in (it will display the data whose value is present the
+   8. comparison array) <br>
+   9. $nin = Not in (It will display the data whose value is not present the comparison array) <br>
 
    syntax : <br>
    db.collection_name.find({ 'field_name': {'$operator' : 'field_value' } }); <br>
-   <br>
 
    ```
    db.teachers.find( {  'joining_data' : { $eq : 2005 }  } );
@@ -258,7 +258,7 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
    b. $or operator: <br>
    It execute only when any one condition is true. <br>
-   syntax : db.collection_name.find( $operator : [] ); <br>
+   syntax : db.collection_name.find( $operator : [(condition1), (condition2)] ); <br>
 
    ```
    db.students.find( { $or : [ { rollno : {$gt  : 20} } , {'sports':'baseball' } ] } ).count();
@@ -266,7 +266,7 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
    c. $nor operator: <br>
    It execute when none of the condition are true.<br>
-   syntax : db.collection_name.find( $operator : [] ); <br>
+   syntax : db.collection_name.find( $operator : [(condition1), (condition2)] ); <br>
 
    ```
    db.students.find( { $or : [ { rollno : {$gt  : 20} } , {'sports':'baseball' } ] } ).count();
@@ -274,7 +274,7 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
    c. $not operator: <br>
    It has unique operation it invert the results eg. expression result is true invert into false. <br>
-   syntax : db.collection_name.find( $operator : [] ); <br>
+   syntax : db.collection_name.find( { fieldkey : { $operator : { condition } } } ); <br>
 
    ```
    db.students.find({  stream : { $not : { $eq : 'commerce' } }  });
