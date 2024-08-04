@@ -23,4 +23,26 @@
 ### Drawback of Typescript
 
 1. Compilation
-2. Very Discipline Approch in coding
+2. Very Discipline Approach in coding
+
+### Typescript installion
+
+```
+npm install -g typescript
+```
+
+It willl install typescript in Global Aspect
+
+### TSC Config File
+
+1. First enable tsc config file using command
+
+```
+tsc --init
+```
+
+2. Now tsc config will be created which can be updated as per convinience.Some useful setting and standard practice must follow for industry practice are as follows.
+   1. Uncomment rootdir (main code file folder name) and update code folder name `"rootDir": "./src"`.
+   2. Uncomment outdir (js output code folder name) and update code folder name `"outDir": "./dist"`.
+   3. Uncomment this option `"noEmitOnError": true` (do not generate js id ts has any error).
+   4. Uncomment this option `"removeComments": true ` (will not generate comment in js code)
