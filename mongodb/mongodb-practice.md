@@ -12,21 +12,21 @@ It has 2 crucial benefits <br>
 
 # How to run mongodb in linux after installation
 
-=> mongodb start <br> <br>
+=> mongodb start <br>
 
-=> mongod --version <br> <br>
+=> mongod --version <br>
 
-=> sudo systemctl start mongod <br> <br>
+=> sudo systemctl start mongod <br>
 
-=> sudo systemctl status mongod <br> <br>
+=> sudo systemctl status mongod <br>
 
 => mongosh <br> <br>
 
 # How to run mongodb in windows after installation
 
-=> mongod --version <br> <br>
+=> mongod --version <br>
 
-=> mongosh <br> <br>
+=> mongosh <br>
 
 ---
 
@@ -38,6 +38,7 @@ short commands
 
 command + tab => for autocomplete <br>
 cls => clear mongodbshell screen <br>
+mongodb uses camelcase code format.
 
 ## Database Operation
 
@@ -95,55 +96,59 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
 ## CRUD Operation
 
-1.  Insert value in collections it is of 2 types (insertOne() and insertMany())<br>
+1. Insert value in collections it is of 2 types (insertOne() and insertMany())<br>
 
-    - insertOne() <br>
-      syntax :<br>
-      db.collection-name.insertOne(
-      {
-      field1:value1,
-      field2:value2,
-      }
-      )
-      <br>
-      <br>
+   ##### Insert operation
 
-      ```
-      db.students.insertOne({
-      rollno:5, name:'Rohan', stream:'science'
-      })
-      ```
+   - insertOne() <br>
+     syntax :<br>
+     db.collection-name.insertOne(
+     {
+     field1:value1,
+     field2:value2,
+     }
+     )
+     <br>
+     <br>
 
-    - insertMany() <br>
-      syntax :<br>
-      db.collection-name.insertMany([
-      {
-      field1:value1,
-      field2:value2,
-      },
-      {
-      field1:value1,
-      field2:value2,
-      },
-      {
-      field1:value1,
-      field2:value2,
-      },
-      ] )
-      <br>
-      <br>
+     ```
+     db.students.insertOne({
+     rollno:5, name:'Rohan', stream:'science'
+     })
+     ```
 
-      ```
-      db.students.insertMany([
-      {rollno:2, name:'sahil',stream:'commerce'},
-      {rollno:3, name:'vaibhav',stream:'arts'},
-      {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
-      ])
-      ```
+   - insertMany() <br>
+     syntax :<br>
+     db.collection-name.insertMany([
+     {
+     field1:value1,
+     field2:value2,
+     },
+     {
+     field1:value1,
+     field2:value2,
+     },
+     {
+     field1:value1,
+     field2:value2,
+     },
+     ] )
+     <br>
+     <br>
+
+     ```
+     db.students.insertMany([
+     {rollno:2, name:'sahil',stream:'commerce'},
+     {rollno:3, name:'vaibhav',stream:'arts'},
+     {rollno:4, name:'Anurag',stream:'diploma', sports:'chess'},
+     ])
+     ```
 
 - While inserting data in mongodb it has 2 operation methods <br>
   --> Ordered : It is default behaviour and line execution interpretor stops after encountering first error. <br>
   --> Unordered : It is behaviour which ee have to set by setting `{ orderend: false }` which will allow interpretor to move on even though if it encounter any error jump on next line.
+
+---
 
 2. Read Operation in MongoDB <br>
 
@@ -183,19 +188,19 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    ##### Read operation using comparison operator
 
    We have multiple operator it define specific compairison operation <br>
-   $eq = Equal <br>
-   $neq = not equal <br>
-   $lt = less than <br>
-   $lte = less than equal too <br>
-   $gt = greater than <br>
-   $gte = greater than equal too <br>
-   $in = in (it will display the data whose value is present the
-   comparison array) <br>
-   $nin = Not in (It will display the data whose value is not present the comparison array) <br>
+
+   1. $eq = Equal <br>
+   2. $neq = not equal <br>
+   3. $lt = less than <br>
+   4. $lte = less than equal too <br>
+   5. $gt = greater than <br>
+   6. $gte = greater than equal too <br>
+   7. $in = in (it will display the data whose value is present the
+   8. comparison array) <br>
+   9. $nin = Not in (It will display the data whose value is not present the comparison array) <br>
 
    syntax : <br>
    db.collection_name.find({ 'field_name': {'$operator' : 'field_value' } }); <br>
-   <br>
 
    ```
    db.teachers.find( {  'joining_data' : { $eq : 2005 }  } );
@@ -240,11 +245,11 @@ Note : Collection name and fields name inside collection are case sensitive <br>
 
    1. $and
    2. $or
-   3. $not
-   4. $nor
+   3. $nor
+   4. $not
 
    a. $and operator: <br>
-   It execute only when both condition are true.
+   It execute only when both condition are true. <br>
    syntax : db.collection_name.find( $operator : [ (condition1), (condition2) ] ); <br>
 
    ```
@@ -252,16 +257,85 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    ```
 
    b. $or operator: <br>
-   It execute only when any one condition is true.
-   syntax : db.collection_name.find( $operator : [] ); <br>
+   It execute only when any one condition is true. <br>
+   syntax : db.collection_name.find( $operator : [(condition1), (condition2)] ); <br>
 
    ```
+<<<<<<< HEAD
    db.students.find( { $or : [ { rollno : {$gt  : 150} } , {'sports':'baseball' } ] } ).count();
    ```
 
    a. $nor operator: <br>
    It execute only when both condition are true.
    syntax : db.collection_name.find( $operator : [] ); <br>
+=======
+   db.students.find( { $or : [ { rollno : {$gt  : 20} } , {'sports':'baseball' } ] } ).count();
+   ```
+
+   c. $nor operator: <br>
+   It execute when none of the condition are true.<br>
+   syntax : db.collection_name.find( $operator : [(condition1), (condition2)] ); <br>
+
+   ```
+   db.students.find( { $or : [ { rollno : {$gt  : 20} } , {'sports':'baseball' } ] } ).count();
+   ```
+
+   c. $not operator: <br>
+   It has unique operation it invert the results eg. expression result is true invert into false. <br>
+   syntax : db.collection_name.find( { fieldkey : { $operator : { condition } } } ); <br>
+
+   ```
+   db.students.find({  stream : { $not : { $eq : 'commerce' } }  });
+   ```
+
+---
+
+3. Update Operation in MongoDB <br>
+
+   ##### Update Operation
+
+   - updateOne() <br>
+     syntax :<br>
+     db.collection_name.updateOne( (to fetch particular data from json) { field_key:field_value } , (set new data for required fields) {
+     $set : {
+     field_name : field_value,
+     field_name : field_value,
+     field_name : field_value
+     }
+     } );
+     <br>
+
+     ```
+     db.students.updateOne({ rollno: 2 } , {  $set : {
+         name : 'Mayank',
+         sports : 'badminton',
+         stream : 'science'
+     }   }   );
+     ```
+
+---
+
+4. Deleted Operation in MongoDB <br>
+
+   ##### Delete Operation
+
+   - deleteOne() <br>
+     syntax :<br>
+     db.collection_name.deleteOne( { field_key:field_value } );
+     <br>
+
+     ```
+     db.students.deleteOne({ _id: ObjectId('66a4f9a6558c75c87a482f8f')  });
+     ```
+
+   - deleteMany() <br>
+     syntax :<br>
+     db.collection_name.deleteMany( { field_key:field_value } );
+     <br>
+     ```
+     db.students.deleteMany({ stream: 'diploma'  });
+     ```
+>>>>>>> 0eaf1f572ce7b8893df98e478ac654fa88f2c48d
 
 ---
 
