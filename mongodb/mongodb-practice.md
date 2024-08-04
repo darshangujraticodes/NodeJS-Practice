@@ -255,6 +255,10 @@ Note : Collection name and fields name inside collection are case sensitive <br>
    It execute only when any one condition is true.
    syntax : db.collection_name.find( $operator : [] ); <br>
 
+   ```
+   db.students.find( { $or : [ { rollno : {$gt  : 150} } , {'sports':'baseball' } ] } ).count();
+   ```
+
    a. $nor operator: <br>
    It execute only when both condition are true.
    syntax : db.collection_name.find( $operator : [] ); <br>
