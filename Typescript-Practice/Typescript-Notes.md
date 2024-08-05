@@ -1,6 +1,6 @@
-# TypesScript Notes
+# TypeScript Notes
 
-### What is Typescript ?
+### What is TypeScript ?
 
 1. It is a programming lang. to address shortcomings of javascript developed by microsoft.
    eg Javascript and Typescript are like siblings children in which javascript is like a indiscipline and naughty boy while typescript is very discipline and follow guidelines or command.
@@ -13,19 +13,19 @@
 > [!NOTE]
 > Typescript was build on ES5 which was previous js version followed before ES6 and ES6 was published on 2015 due to which to use ES6 feature we need to configure it manually.
 
-### Benefits of Typescript
+### Benefits of TypeScript
 
 1. Static Typing
 2. Code completion
 3. Shorthand notation
 4. Refactoring
 
-### Drawback of Typescript
+### Drawback of TypeScript
 
 1. Compilation
 2. Very Discipline Approach in coding
 
-### Typescript installion
+### TypeScript installion
 
 ```
 npm install -g typescript

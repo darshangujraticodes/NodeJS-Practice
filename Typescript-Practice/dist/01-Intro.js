@@ -1,4 +1,11 @@
 "use strict";
+let mark1 = 80;
+let mark2 = 80;
+let studentName1 = "Sahil";
+let studentName2 = "Sahil";
+let isPass = true;
+let isfailed = false;
+const schoolData = [1, "darshan", true];
 const arrayValue = [4, 54, 56, 64, 46, 684, 10];
 console.log(arrayValue);
 console.log("l");
@@ -26,6 +33,10 @@ function calculateTax(income, taxRegime = "old") {
     }
 }
 console.log(calculateTax(200, "new"));
+function personData(name, profession, exp) {
+    console.log(`  Hi, ${name} here, I am ${profession} with ${exp} years of Experience. `);
+}
+console.log(personData("Darshan", "Full Stack Developer", 5));
 let employee = {
     id: 1,
     name: "",
@@ -34,3 +45,16 @@ let employee = {
     },
 };
 employee.joiningDate(new Date("2024-01-5"));
+let a;
+a = 17;
+a = "harsh";
+let b;
+let data = {
+    employeeId: 17,
+    employeeName: "Darshan",
+    joiningData: new Date("2024-01-6"),
+    department: "Developer",
+    companyName: "Softlers",
+    founderName: "Rohit Pani",
+};
+console.log(data.employeeName);
