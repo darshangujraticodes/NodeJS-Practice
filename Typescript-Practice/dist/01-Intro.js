@@ -8,8 +8,8 @@ let isfailed = false;
 const schoolData = [1, "darshan", true];
 const arrayValue = [4, 54, 56, 64, 46, 684, 10];
 console.log(arrayValue);
-console.log("l");
-console.log(34);
+console.log("Tshirt size =", "l");
+console.log("PantSize =", 34);
 function calculateTax(income, taxRegime = "old") {
     if (taxRegime === "old") {
         if (income <= 50)
@@ -32,11 +32,11 @@ function calculateTax(income, taxRegime = "old") {
         }
     }
 }
-console.log(calculateTax(200, "new"));
+console.log("Income Tax = ", calculateTax(200, "new"));
 function personData(name, profession, exp) {
     console.log(`  Hi, ${name} here, I am ${profession} with ${exp} years of Experience. `);
 }
-console.log(personData("Darshan", "Full Stack Developer", 5));
+personData("Darshan", "Full Stack Developer", 5);
 let employee = {
     id: 1,
     name: "",
@@ -52,9 +52,9 @@ let b;
 let data = {
     employeeId: 17,
     employeeName: "Darshan",
-    joiningData: new Date("2024-01-6"),
+    joiningDate: new Date("2024-01-6"),
     department: "Developer",
     companyName: "Softlers",
     founderName: "Rohit Pani",
 };
-console.log(data.employeeName);
+console.log(data.joiningDate.toLocaleDateString);

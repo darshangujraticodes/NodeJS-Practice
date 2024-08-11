@@ -43,14 +43,14 @@ const enum TshirtSize {
   Medium = "m",
   Large = "l",
 }
-console.log(TshirtSize.Large);
+console.log("Tshirt size =", TshirtSize.Large);
 
 const enum PantSize {
   Small = 32,
   Medium,
   Large,
 }
-console.log(PantSize.Large);
+console.log("PantSize =", PantSize.Large);
 
 // function
 function calculateTax(income: number, taxRegime = "old"): number {
@@ -71,7 +71,7 @@ function calculateTax(income: number, taxRegime = "old"): number {
   }
 }
 
-console.log(calculateTax(200, "new"));
+console.log("Income Tax = ", calculateTax(200, "new"));
 
 function personData(name: string, profession: string, exp: number): void {
   console.log(
@@ -79,7 +79,7 @@ function personData(name: string, profession: string, exp: number): void {
   );
 }
 
-console.log(personData("Darshan", "Full Stack Developer", 5));
+personData("Darshan", "Full Stack Developer", 5);
 
 // objects
 // note ?(question mark) denote optional value
@@ -121,7 +121,7 @@ type Company = {
 type Employee = {
   employeeId: number;
   employeeName: string;
-  joiningData: Date;
+  joiningDate: Date;
   department: string;
 };
 
@@ -130,10 +130,32 @@ type CompanyEmployee = Company & Employee;
 let data: CompanyEmployee = {
   employeeId: 17,
   employeeName: "Darshan",
-  joiningData: new Date("2024-01-6"),
+  joiningDate: new Date("2024-01-6"),
   department: "Developer",
   companyName: "Softlers",
   founderName: "Rohit Pani",
 };
 
-console.log(data.employeeName);
+console.log(data.joiningDate.toLocaleDateString);
+
+// tsc --init
+
+/*
+
+developer setting which reuired to prevent and debug errors
+
+1. root dir
+2. out dir
+3. removecomments
+4. NoEmitonError
+5. noUnusedlocals
+6. noUnsed
+7. noUnsedPatameter
+8. noImplicitReturns
+
+
+tsc --watch (realtime compilation it automaticall run reflect change on code fil changes..)
+
+*/
+
+// Type Aliases
