@@ -8,7 +8,7 @@ NodeJs is an open source, cross platform, javascript runtime environment
 2. Full stack development skill
 3. large community support
 
-### Javascrip engine
+### Javascript engine
 
 1. V8 in chrome by google
 2. spidermonkey in mozilla
