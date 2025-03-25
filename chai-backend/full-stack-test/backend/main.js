@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 
 const app = express();
@@ -53,7 +56,7 @@ app.get("/api/users", (req, res) => {
   res.json(usersInfo);
 });
 
-const port = process.env.PORT || 5050;
+const port = process.env.PORT || 5614;
 
 app.listen(port, () => {
   console.log(`Server is Listening on Port : ${port}`);

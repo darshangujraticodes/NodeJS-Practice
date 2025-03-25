@@ -4,10 +4,6 @@
 import express from "express";
 import "dotenv/config";
 
-// old js version
-// require("dotenv").config();
-// console.log(process.env);
-
 const app = express();
 
 // const PORT = 8000;
