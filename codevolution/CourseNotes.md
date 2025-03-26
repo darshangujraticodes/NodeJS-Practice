@@ -40,3 +40,11 @@ JS Runtime provides all the necessary components in order to use and run the js 
     - It consist of all this js lib which we used to execute to perform operation
 
 eg. User uses library js file to execute js program in which runtime uses source folder file to
+
+### Modules
+
+1. Local modules - we create in our app
+2. Built in modules - it is in the library form where nodes js provides us
+3. Third Party Modules - modules created by other developer that we can use in our project
+
+All this modules are found in npm (node package manager) library
