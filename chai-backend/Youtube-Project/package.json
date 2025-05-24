@@ -1,0 +1,21 @@
+{
+  "name": "youtube-project",
+  "version": "1.0.0",
+  "description": "node js practice",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "type": "module",
+  "keywords": [
+    "nodejs",
+    "backend",
+    "practice"
+  ],
+  "author": "Darshan",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
+  }
+}
